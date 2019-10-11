@@ -1,0 +1,28 @@
+server:
+  port: 8099
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/liang?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapper-locations: classpath*:/mybatis/mapper/*Mapper.xml,classpath*:/mybatis/mapper/**/*Mapper.xml
+  #type-enums-package: com.bonade.user.enums
+  global-config:
+    field-strategy: 1
+    db-column-underline: true
+    refresh-mapper: true
+    #capital-mode: true
+    db-config:
+      id-type: ID_WORKER_STR
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com:
+      bonade: debug
+  file: /var/log/platform.log
