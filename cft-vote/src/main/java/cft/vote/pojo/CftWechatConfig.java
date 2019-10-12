@@ -5,7 +5,6 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
@@ -15,12 +14,8 @@ import lombok.Data;
 
 
 /**
- * <p>
  * 微信配置
- * </p>
  *
- * @author admin
- * @since 2019-10-11
  */
 @Data
 @TableName("cft_wechat_config")
@@ -33,7 +28,7 @@ public class CftWechatConfig implements Serializable {
 	/**
 	 * 主键
 	 */
-	@TableId(value = "id_", type = IdType.UUID)
+	@TableId(value = "id")
 	private String id;
     /**
      * 第三方说明

@@ -7,6 +7,21 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/liang?serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: cft-vote
+  redis:
+    database: 0
+    databasebnd:
+      db0: 0
+      db1: 0
+      timeout: 10000
+      pool:
+        max-idle: 3000
+        min-idle: 30
+        max-wait: -1
+    host: 192.168.0.251
+    port: 6379
+    password: e#l2jISe*d0AdEeS29w
 mybatis-plus:
   mapper-locations: classpath*:/mybatis/mapper/*Mapper.xml,classpath*:/mybatis/mapper/**/*Mapper.xml
   #type-enums-package: com.bonade.user.enums
